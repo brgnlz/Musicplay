@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AlbumTracksWindow</class>
+ <widget class="QWidget" name="AlbumTracksWindow">
+  <property name="windowTitle">
+   <string>Альбом</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+
+   <item>
+    <widget class="QLabel" name="labelTitle">
+ <property name="text">
+  <string>Название альбома</string>
+ </property>
+ <property name="alignment">
+  <set>Qt::AlignHCenter|Qt::AlignVCenter</set>
+ </property>
+ <property name="styleSheet">
+  <string notr="true">
+   font-size: 24pt;
+   font-weight: bold;
+   color: #ff3399;
+   text-shadow: 1px 1px white;
+  </string>
+ </property>
+</widget>
+
+   </item>
+
+  <item>
+ <layout class="QHBoxLayout" name="coverLayout">
+  <item>
+   <spacer name="horizontalSpacerLeft">
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="sizeType">
+     <enum>QSizePolicy::Expanding</enum>
+    </property>
+    <property name="sizeHint" stdset="0">
+     <size>
+      <width>40</width>
+      <height>20</height>
+     </size>
+    </property>
+   </spacer>
+  </item>
+  <item>
+   <widget class="QLabel" name="labelCover">
+    <property name="minimumSize">
+     <size>
+      <width>200</width>
+      <height>200</height>
+     </size>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </item>
+  <item>
+   <spacer name="horizontalSpacerRight">
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="sizeType">
+     <enum>QSizePolicy::Expanding</enum>
+    </property>
+    <property name="sizeHint" stdset="0">
+     <size>
+      <width>40</width>
+      <height>20</height>
+     </size>
+    </property>
+   </spacer>
+  </item>
+ </layout>
+</item>
+
+
+   <item>
+    <widget class="QTableView" name="tableView"/>
+   </item>
+
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="btnAddTrack">
+       <property name="text">
+        <string>Добавить трек</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnEditTrack">
+       <property name="text">
+        <string>Редактировать трек</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnDeleteTrack">
+       <property name="text">
+        <string>Удалить трек</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+<item>
+ <widget class="QPushButton" name="btnPlayTrack">
+  <property name="text">
+   <string>Воспроизвести</string>
+  </property>
+ </widget>
+</item>
+
+
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

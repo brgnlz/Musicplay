@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AlbumsWindow</class>
+ <widget class="QMainWindow" name="AlbumsWindow">
+  <property name="windowTitle">
+   <string>Альбомы</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+
+    <!-- 🔍 Фильтр и поиск -->
+    <item>
+     <widget class="QWidget" name="filterWidget">
+      <layout class="QHBoxLayout" name="filterLayout">
+       <item>
+        <widget class="QLabel" name="labelSearch">
+         <property name="text">
+          <string>Поиск:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEditSearch"/>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBoxFilter">
+         <item><property name="text"><string>Все поля</string></property></item>
+         <item><property name="text"><string>Название</string></property></item>
+         <item><property name="text"><string>Исполнитель</string></property></item>
+         <item><property name="text"><string>Жанр</string></property></item>
+         <item><property name="text"><string>Год выпуска</string></property></item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+
+    <!-- 📋 Таблица -->
+    <item>
+     <widget class="QTableView" name="tableView"/>
+    </item>
+
+    <!-- 🔘 Кнопки -->
+    <item>
+     <layout class="QHBoxLayout" name="buttonLayout">
+      <item>
+       <widget class="QPushButton" name="btnAdd">
+        <property name="text">
+         <string>Создать альбом</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnEdit">
+        <property name="text">
+         <string>Редактировать</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnDelete">
+        <property name="text">
+         <string>Удалить</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnOpenAlbum">
+        <property name="text">
+         <string>Открыть альбом</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PlaylistTracksWindow</class>
+ <widget class="QDialog" name="PlaylistTracksWindow">
+<property name="styleSheet">
+ <string notr="true">
+QDialog, QWidget {
+    background-color: #fff0f5;
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+QLabel {
+    color: #444;
+}
+
+QPushButton {
+    background-color: #cc2b85;
+    color: white;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-weight: bold;
+    border: none;
+}
+QPushButton:hover {
+    background-color: #e0439a;
+}
+
+QTableView {
+    background-color: #ffe6f0;
+    alternate-background-color: #ffedf5;
+    gridline-color: #ff99cc;
+    selection-background-color: #ffccdd;
+    selection-color: #000;
+    border: 1px solid #ffb6d9;
+}
+QHeaderView::section {
+    background-color: #ff99cc;
+    color: #fff;
+    font-weight: bold;
+    padding: 6px;
+    border: 1px solid #ff66a3;
+}
+ </string>
+</property>
+  <property name="windowTitle">
+   <string>Треки плейлиста</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="labelTitle">
+     <property name="text">
+      <string>Название плейлиста</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="styleSheet">
+      <string>font-size: 20pt; font-weight: bold; color: #333;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="labelCover">
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>150</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="labelDescription">
+     <property name="text">
+      <string>Описание плейлиста</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="styleSheet">
+      <string>font-size: 14pt; margin: 10px; color: #555;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+ <layout class="QHBoxLayout" name="tableLayout">
+  <item>
+   <spacer name="horizontalSpacerLeft">
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="sizeType">
+     <enum>QSizePolicy::Expanding</enum>
+    </property>
+   </spacer>
+  </item>
+  <item>
+   <widget class="QTableView" name="tableView">
+    <property name="maximumSize">
+     <size>
+      <width>750</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>600</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="selectionBehavior">
+     <enum>QAbstractItemView::SelectRows</enum>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::SingleSelection</enum>
+    </property>
+   </widget>
+  </item>
+  <item>
+   <spacer name="horizontalSpacerRight">
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="sizeType">
+     <enum>QSizePolicy::Expanding</enum>
+    </property>
+   </spacer>
+  </item>
+ </layout>
+</item>
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <item>
+      <spacer name="spacerLeft">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Expanding</enum>
+       </property>
+      </spacer>
+     </item>
+<item>
+ <widget class="QPushButton" name="btnAddTrack">
+  <property name="text">
+   <string>➕ Добавить трек</string>
+  </property>
+ </widget>
+</item>
+
+     <item>
+      <widget class="QPushButton" name="btnPlay">
+       <property name="text">
+        <string>▶ Воспроизвести</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnDelete">
+       <property name="text">
+        <string>🗑 Удалить трек</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="spacerRight">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Expanding</enum>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
